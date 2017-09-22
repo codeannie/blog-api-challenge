@@ -10,11 +10,11 @@ const blogPostRouter = require('./blogPostRouter');
 //logs http layer
 app.use(morgan('common'));
 
-app.get('/blog-post', (req, res) => {
-  res.json(BlogPosts.get());
-});
+// app.get('/blog-post', (req, res) => {
+//   res.json(BlogPosts.get());
+// });
 
-app.use('/blog-post', blogPostRouter);
+app.use('/blog-posts', blogPostRouter);
 
 app.listen(process.env.PORT || 8080, () => {
   console.log(`Your app is listening on port ${process.env.PORT || 8080}`);
