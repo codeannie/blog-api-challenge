@@ -11,7 +11,7 @@ const blogPostRouter = require('./blogPostRouter');
 app.use(morgan('common'));
 
 app.get('/blog-post', (req, res) => {
-  res.json(BlogPost.get());
+  res.json(BlogPosts.get());
 });
 
 app.use('/blog-post', blogPostRouter);
