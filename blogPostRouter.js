@@ -5,6 +5,7 @@ const router = express.Router();
 
 const bodyParser = require('body-parser');
 const jsonParser = bodyParser.json();
+const uuid = require('uuid');
 
 const {BlogPosts} = require('./models');
 
