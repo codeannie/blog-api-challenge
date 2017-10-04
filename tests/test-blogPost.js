@@ -45,6 +45,7 @@ describe('Blog API', function() {
     };
     return chai.request(app)
       .post('/blog-posts')
+      .send(newPost)
       .then(function(res) {
         res.should.have.status(201);
         res.body.should.be.a('object');
