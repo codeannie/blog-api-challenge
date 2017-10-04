@@ -15,7 +15,7 @@ BlogPosts.create(
     title: 'Post 1',
     content: 'This is the first post',
     author: 'Natsumi',
-    publishDate: Date.now()
+    publishDate: '10/01/2017'
   });
 
 BlogPosts.create(
@@ -24,7 +24,7 @@ BlogPosts.create(
     title: 'Post 2',
     content: 'This is the second post',
     author: 'Natsumi',
-    publishDate: Date.now()
+    publishDate: '10/02/2017'
   });
 
 router.get('/', (req, res) => {
