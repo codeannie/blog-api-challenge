@@ -42,9 +42,10 @@ function closeServer() {
     });
   });
 }
-
-if (require.main === module) {
+//module refers to server.js 
+//if the require.main === server 
+if (require.main === module) { 
   runServer().catch(err => console.error(err));
 };
 
-module.exports = {app, runServer, closeServer};
+module.exports = {app, runServer, closeServer}; //this is main module
