@@ -36,12 +36,12 @@ describe('Blog API', function() {
   });
 
   //Test POST a new blog post
-  it('should post a new blog post on POST request', function() {
+  it('should create a new blog post on POST request', function() {
     let newPost = {
       title : 'Testing POST request',
       content : 'I hope this works',
       author : 'Joe Bruin',
-      publishDate : '10/03/2017'
+      publishDate : 1507216571932
     };
     return chai.request(app)
       .post('/blog-posts')
