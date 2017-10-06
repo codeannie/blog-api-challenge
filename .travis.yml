@@ -1,2 +1,9 @@
 language: node_js
 node_js: node
+deploy:
+  provider: heroku
+  api_key:
+    secure: MHqv3H/OgUaSs7yBpjSkG1I4TlxFDvoKzj6XCJlzA37J0Cvyu/AmS6PlTsMxZ7kp26oZt0OPFcOJJA6A8BmKObDs9xRwWbgkW6VJZx96nRGyyz01J3qiuTQv8fa5UDTA0N8kqdsgsVr0Msn21lobEzemP54HXcEpkGQq0Wxk7X//+O3psiH+O/i3yry7efOOKCleqGujGv33AV2g4+RRxssb+T5Yeiap5Uxe+5g+DX6Fp/dlEkTA3Kr7e2QkVax5Hyoy0yHJ8f/QcadxLvcwAcDmaUFS11fHOwpelIrAplkcM2Wh8VRPTl9VV4ZD5fm7q/0SUNSy1EJGRCacAB57TRMOWNnuWKQZxjzinsqAQWkw7TXyDsP6kRvRiy6k0nozdoSiYBDQpfiJbPfyJQQz26GvYceX1kuaT/Lv8mK+6mC0AgGO2BHcFbibhzsNSMnqd+4tCz/K7CI96wZ3TxBeOzklYKc5wlKGVFzIFyBqnRt8X9eEEN64pM/ghd3iKDL0e7/1i18HDlQ0mBmZza+ATu/as11qXSqTrXgsi8UZJ4+RhROqrdW7EF8p3Ard2RC0813AqAwv31ie4YJMBRtLERACqURFudcGmpld8wgypWuOBMUzhkvaN2Y62PtAxW7M8RF+rLCjtZgJe177kUamby+DvJqdrEEp0Q+FxIonYFQ=
+  app: https://quiet-sands-84254.herokuapp.com/
+  on:
+    repo: codeannie/blog-api-challenge
