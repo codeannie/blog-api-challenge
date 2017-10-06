@@ -41,7 +41,6 @@ describe('Blog API', function() {
       title : 'Testing POST request',
       content : 'I hope this works',
       author : 'Joe Bruin',
-      publishDate : 1507216571932
     };
     return chai.request(app)
       .post('/blog-posts')
@@ -59,7 +58,8 @@ describe('Blog API', function() {
   it('should update an existing blog post on PUT request', function() {
     const updatePost = {
       title : 'We are updating with PUT!',
-      content : 'I hope this changed with PUT'
+      content : 'I hope this changed with PUT',
+      author : 'Chex',
     };
     return chai.request(app)
       .get('/blog-posts')
@@ -70,7 +70,7 @@ describe('Blog API', function() {
           .send(updatePost);
       })
       .then(function(res) {
-        res.should.have.status(200);
+        res.should.have.status(204);
         res.should.be.json;
         res.should.be.a('object');
         res.body.should.deep.equal(updatePost);
