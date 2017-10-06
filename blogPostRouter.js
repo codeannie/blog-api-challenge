@@ -9,23 +9,9 @@ const uuid = require('uuid');
 
 const {BlogPosts} = require('./models');
 
-BlogPosts.create(
-  { 
-    id: uuid.v4(),
-    title: 'Post 1',
-    content: 'This is the first post',
-    author: 'Natsumi',
-    publishDate: '10/01/2017'
-  });
+BlogPosts.create('Post 1','This is the first post','Natsumi','10/01/2017');
 
-BlogPosts.create(
-  { 
-    id: uuid.v4(),
-    title: 'Post 2',
-    content: 'This is the second post',
-    author: 'Natsumi',
-    publishDate: '10/02/2017'
-  });
+BlogPosts.create('Post 2','This is the second post','Natsumi','10/02/2017');
 
 router.get('/', (req, res) => {
   res.json(BlogPosts.get());
@@ -66,7 +52,7 @@ router.put('/:id', jsonParser, (req, res) => {
     title: req.body.title,
     content: req.body.content,
   });
-  res.status(204).end();
+  res.status(204).json(updatedBlogPost);
 });
 
 router.delete('/:id', (req, res) => {
